@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Container, Content } from './styled';
+import { Container, Content, HeaderCard } from './styled';
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
 const EventsCards = ({ allEvents }: any) => {
@@ -25,16 +25,18 @@ const EventsCards = ({ allEvents }: any) => {
       {
         handleRenderer.length > 0 && handleRenderer.map((event: any) => (
         <Content key={event.id}>
-          <div>
+          <HeaderCard>
             <h2>{event.discipline_name}</h2>
             <h3>Event: {event.event_name}</h3>
-          </div>
+          </HeaderCard>
+
           <div>
             <p><strong>Details:</strong> {event.detailed_event_name}</p>
             <p><strong>Medal Event:</strong> {event.is_medal_event !== 0 ? 'Yes' : 'No'}</p>
             <p><strong>Status:</strong> {event.status}</p>
             <img src={event.discipline_pictogram} alt="Event pictogram" />
           </div>
+
           <div>
             <p><strong>Venue:</strong> {event.venue_name}</p>
             <p><strong>Date:</strong> {event.day.split('-').reverse().join('/')}</p>
@@ -48,10 +50,12 @@ const EventsCards = ({ allEvents }: any) => {
               <div key={event.id}>
                 {
                   event.competitors.map((competitor: any) => (
-                    <li key={event.id}>
+                    <li key={competitor.country_flag_url}>
                       <div>
                         <img src={competitor.country_flag_url} alt="" />
-                        <p>{competitor.competitor_name} {competitor.last_name}</p>
+                        <p>
+                          {competitor.competitor_name} {competitor.last_name}
+                        </p>
                         <p>Country: {competitor.country_id}</p>
                       </div>
                       <div>
