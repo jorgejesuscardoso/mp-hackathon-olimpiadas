@@ -6,7 +6,12 @@
 
 :root {
 
-  --body-bg-color: #242424;
+  --body-bg-color: #aaa;
+
+  /* Navbar */
+  --navbar-bg-color: #F5F5F5;
+  --navbar-text-color: #072196;
+  --navbar-border-color: #05832b;
 
 }
 
