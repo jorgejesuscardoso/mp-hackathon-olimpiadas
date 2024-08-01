@@ -33,6 +33,13 @@ const Home = () => {
     <Container> 
       <div>
         <h1>Next Events</h1>
+        <div>
+          {filteredData.map((item: any) => (
+            <div key={item.id}>
+              <h2>{item.status}</h2>
+            </div>
+          ))}
+        </div>
       </div>
       
     </Container>
