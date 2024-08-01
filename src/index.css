@@ -6,13 +6,20 @@
 
 :root {
 
-  --body-bg-color: #aaa;
+  --body-bg-color: #ddd;
 
   /* Navbar */
-  --navbar-bg-color: #F5F5F5;
-  --navbar-text-color: #072196;
-  --navbar-border-color: #05832b;
+  --navbar-bg-color: #0200808c;
+  --navbar-text-color: #ffffff;
+  --navbar-border-color: #053c83;
+  --navbar-text-hover-color: rgb(241, 241, 241);
 
+  /* Card */
+  --card-bg-color: #ffffff;
+  --card-text-color-1: #08237a;
+  --card-text-color-2: #001f3b;
+  --card-text-strong-color: #353535;
+  --card-border-color: #ccc;
 }
 
 body {

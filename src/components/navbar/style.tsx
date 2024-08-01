@@ -11,6 +11,10 @@ export const NavBar = styled.nav`
   justify-content: space-between;
   align-items: center;
 
+  &.nav-hider {
+    display: none;
+  }
+
   ul {
     display: flex;
     align-items: center;
@@ -26,26 +30,33 @@ export const NavBar = styled.nav`
 
   li {
     text-align: center;
-    margin-right: 10px;
     border-bottom: 2px solid transparent;
-    padding: 7px;
+    padding: 5px;
     width: 100%;
 
       &:hover {
         cursor: pointer;
-        border-bottom: 2px solid var(--navbar-border-color);
+        color: var(--navbar-text-hover-color);
+        border-bottom: 2px solid var(--navbar-text-hover-color);
       }
   }
 
   a {
     display: block;
     text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: bold;
     color: var(--navbar-text-color);
-    width: 100%;
+    width: 100%; 
+    
+    &:hover {
+        color: var(--navbar-text-hover-color);
+      }
   }
 
   img {
     height: 100%;
     border-radius: 50%;
+    cursor: pointer;
   }
 `;

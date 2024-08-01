@@ -1,29 +1,53 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { NavBar } from './style';
+import { useEffect, useState } from 'react';
 
 const Nav = () => {
+  const navigate = useNavigate();
+  const [prevScrollY, setPrevScrollY] = useState(0);
+  const [showNav, setShowNav] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > prevScrollY) {
+        
+        setShowNav(false);
+      } else {
+        
+        setShowNav(true);
+      }
+
+      setPrevScrollY(currentScrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [prevScrollY]);
+
   return (
-    <NavBar>
-      <img src="olympics.png" alt="" />
+    <NavBar className={showNav ? 'navbar' : 'navbar nav-hider'}>
+      <img src="olympics.png" alt=""
+        onClick={
+          () => navigate('/')
+        }
+      />
 
       <ul>
         <li>
-          <Link to="/events"
-        >
-          Events
-        </Link>
-        </li>
-
-        <li>
-          <Link to="/countries">Countries</Link>
-        </li>
-      </ul>
-
-      <ul>      
-        <li>
           <Link to="/">Home</Link>
         </li>
-        
+
+        <li>
+          <Link to="/events">
+            Events
+          </Link>
+        </li>    
+
         <li>
           <Link to="#">About</Link>
         </li>

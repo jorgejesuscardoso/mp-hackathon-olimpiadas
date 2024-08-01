@@ -5,39 +5,222 @@ export const Container = styled.main`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 100%;
+  margin-top: 8vh;
+  gap: 10px;
+  background-color: #f0f0f0;
 
-  img {
-    width: 20vw;
-  }
-
-  h1 {
-    text-align: center;
-    font-size: 2rem;
-    background-color: #f5f5f5;
-    padding: 10px;
-    width: 60vw;
-  }
+  margin-bottom: 8vh;  
 `;
 
-export const Content = styled.div`
+export const Card = styled.div`
   display: flex;
-  background-color: #f5f5f5;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 10px;
-  width: 60vw;
-  margin: 10px;
+  width: 70vw;
   border: none;
-  box-shadow: 2px 2px 10px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  margin-top: 10px;
+  box-shadow: 2px 2px 10px 4px rgba(0, 23, 49, 0.5);
+`;
+
+export const CountryContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  width: 23%;
+  margin: 10px;
+  border-radius: 7px;
+  border: none;
+  box-shadow: 2px 2px 10px 4px rgba(0, 4, 37, 0.3);
 `;
 
 export const HeaderCard = styled.div`
   display: flex;
   align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  border-bottom: 1px solid var(--card-border-color);
+
+  h2 {
+    color: var(--card-text-color-2);
+    font-size: 1rem;
+  }
+
+  h3 {
+    color: var(--card-text-color-2);
+    font-size: 0.9rem;
+  }
+
+  p {
+    color: var(--card-text-color-2);
+    font-size: 0.8rem;
+  }
+
+  img {
+    width: 5vw;
+  }
+`;
+
+export const CardInfo = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  padding: 10px;
+  gap: 5px;  
+
+  div {
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    gap: 5px;
+  }
+
+  div.time-card {
+    width: 20%;
+  }
+
+  div.avenue-card {
+    width: 45%;
+  }
+
+  p {
+    color: var(--card-text-color-2);
+    font-size: 0.8rem;
+    width: 100%;
+  }
+`;
+
+export const Competitors = styled.div`
+  display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: space-between;
   width: 100%;
   padding: 10px;
-  border-bottom: 1px solid #ccc;
+
+  h4 {
+    margin: 10px;
+  }
+
+  div.competitors-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    
+    p {
+      text-align: center;
+      color: var(--card-text-color-2);
+      font-size: 0.8rem;
+      width: 100%;
+    }
+
+    strong {
+      font-size: 0.85rem;
+      color: var(--card-text-strong-color);
+    }
+  }
+
+  div.country-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 30vh;
+
+    img {
+      border: 1px solid var(--card-border-color);
+      border-radius: 10%;
+      width: 60%;
+      margin-bottom: 10px;
+    }
+  }
+
+  div.results-card {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    border-top: 1px solid var(--card-border-color);
+    padding-top: 10px;
+    width: 100%;
+    height: 5vh;
+  }
+
+  img {
+    width: 10vw;
+  }
+`;
+
+
+export const NavigatesButtons = styled.div`
+  position: fixed;
+  background-color: #f0f0f0;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2vh;
+  border-top: 1px solid var(--card-border-color);
+  padding: 3px 0;
+  width: 100%;
+
+  h4 {
+    margin: 0 1vw;
+    color: var(--card-text-color-1);
+  }
+
+  span {
+    display: inline-block;
+    padding: 5px 10px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: var(--card-text-color-1);
+    border-radius: 5px;
+  }
+
+  button {
+    margin: 0 1vw;
+    padding: 2px 10px;
+    background-color: #f0f0f0;
+    color: var(--card-text-color-1);
+    border: 1px solid var(--card-text-color-1);
+    border-radius: 5px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #e0e0e0;
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+      color: #a0a0a0;
+    }
+  }
+
+  select {
+    margin: 0 1vw;
+    background-color: #f0f0f0;
+    color: var(--card-text-color-1);
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    font-weight: bold;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #e0e0e0;
+    }
+  }
 `;
