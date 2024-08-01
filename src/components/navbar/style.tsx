@@ -31,7 +31,6 @@ export const NavBar = styled.nav`
   li {
     text-align: center;
     border-bottom: 2px solid transparent;
-    padding: 5px;
     width: 100%;
 
       &:hover {
@@ -47,8 +46,8 @@ export const NavBar = styled.nav`
     font-size: 0.8rem;
     font-weight: bold;
     color: var(--navbar-text-color);
-    width: 100%; 
-    
+    width: 100%;
+    height: 100%;
     &:hover {
         color: var(--navbar-text-hover-color);
       }
