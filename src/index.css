@@ -5,17 +5,23 @@
 }
 
 :root {
+  /* Font size */
+  --font-size-p: 0.8rem;
+  --font-size-h1: 1.2rem;
+  --font-size-h2: 1rem;
+  --font-size-h3: 0.9rem;
 
-  --body-bg-color: #ddd;
+  /*Body*/
+  --body-bg-color: #ccc;
 
   /* Navbar */
-  --navbar-bg-color: #0200808c;
-  --navbar-text-color: #ffffff;
+  --navbar-bg-color: #fff;
+  --navbar-text-color: #001f3b;
   --navbar-border-color: #053c83;
   --navbar-text-hover-color: rgb(241, 241, 241);
 
   /* Card */
-  --card-bg-color: #ffffff;
+  --card-bg-color: #e9e9e9;
   --card-text-color-1: #08237a;
   --card-text-color-2: #001f3b;
   --card-text-strong-color: #353535;

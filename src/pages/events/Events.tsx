@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from 'react';
 import { CardInfo, Competitors, Container, Card, CountryContainer, HeaderCard, NavigatesButtons } from './styled';
 import { getAll } from '../../services/Api';
@@ -61,6 +62,10 @@ const EventsCards = () => {
         return `2nd ${silverMedal}`;
       case '3':
         return `3rd ${bronzeMedal}`;
+      case '4':
+        return '4th';
+      case '5':
+        return '5th';
       default:
         return '';
     }
@@ -125,7 +130,12 @@ const EventsCards = () => {
           <Competitors>
             <div key={event.id} className='competitors-content'>
               {
-                event.competitors.sort((a: any, b: any) => b.result_mark - a.result_mark).filter((s: any) => s.country_flag_url).map((competitor: any) => (
+                event.competitors.sort((a: any, b: any) => {
+                  if (a.result_position && b.result_position) {
+                  return a.result_position - b.result_position;                    
+                  }
+                  return b.result_mark - a.result_mark
+                }).filter((s: any) => s.country_flag_url).map((competitor: any) => (
                   <CountryContainer>
                     <div
                       key={competitor.country_flag_url}
@@ -134,9 +144,9 @@ const EventsCards = () => {
                       <img 
                         src={competitor.country_flag_url} alt=""
                       />                
-                      <p><strong>Country:</strong> {competitor.country_id}</p>                  
+                      <p>{competitor.country_id}</p>                  
                       <p>
-                        <strong>Athlete:</strong> {competitor.competitor_name}
+                       {competitor.competitor_name}
                       </p>
                     </div>
                     

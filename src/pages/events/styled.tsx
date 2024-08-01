@@ -7,23 +7,21 @@ export const Container = styled.main`
   justify-content: center;
   width: 100%;
   margin-top: 8vh;
-  gap: 10px;
-  background-color: #f0f0f0;
+  gap: 5px;
 
   margin-bottom: 8vh;  
 `;
 
 export const Card = styled.div`
+  background-color: var(--card-bg-color);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 10px;
-  width: 70vw;
+  width: 50vw;
   border: none;
   border-radius: 10px;
-  margin-top: 10px;
-  box-shadow: 2px 2px 10px 4px rgba(0, 23, 49, 0.5);
 `;
 
 export const CountryContainer = styled.div`
@@ -32,11 +30,11 @@ export const CountryContainer = styled.div`
   align-items: center;
   justify-content: center;
   padding: 10px;
-  width: 23%;
+  width: 30%;
   margin: 10px;
-  border-radius: 7px;
+  border-radius: 5px;
   border: none;
-  box-shadow: 2px 2px 10px 4px rgba(0, 4, 37, 0.3);
+  box-shadow: 1px 1px 5px 2px rgba(0, 4, 37, 0.3);
 `;
 
 export const HeaderCard = styled.div`
@@ -49,17 +47,17 @@ export const HeaderCard = styled.div`
 
   h2 {
     color: var(--card-text-color-2);
-    font-size: 1rem;
+    font-size: var(--font-size-h2);
   }
 
   h3 {
     color: var(--card-text-color-2);
-    font-size: 0.9rem;
+    font-size: var(--font-size-h3);
   }
 
   p {
     color: var(--card-text-color-2);
-    font-size: 0.8rem;
+    font-size: var(--font-size-p);
   }
 
   img {
@@ -83,16 +81,16 @@ export const CardInfo = styled.div`
   }
 
   div.time-card {
-    width: 20%;
+    width: 22%;
   }
 
   div.avenue-card {
-    width: 45%;
+    width: 43%;
   }
 
   p {
     color: var(--card-text-color-2);
-    font-size: 0.8rem;
+    font-size: var(--font-size-p);
     width: 100%;
   }
 `;
@@ -116,17 +114,18 @@ export const Competitors = styled.div`
     align-items: center;
     justify-content: center;
     width: 100%;
+    gap: 10px;
     
     p {
       text-align: center;
       color: var(--card-text-color-2);
-      font-size: 0.8rem;
+      font-size: var(--font-size-p);
       width: 100%;
     }
 
     strong {
-      font-size: 0.85rem;
       color: var(--card-text-strong-color);
+      font-size: var(--font-size-p);
     }
   }
 
@@ -161,7 +160,6 @@ export const Competitors = styled.div`
     width: 10vw;
   }
 `;
-
 
 export const NavigatesButtons = styled.div`
   position: fixed;
