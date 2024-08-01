@@ -4,7 +4,7 @@ export const NavBar = styled.nav`
   position: fixed;
   background-color: var(--navbar-bg-color);
   width: 100%;
-  height: 7vh;
+  height: 9vh;
   top: 0;
   padding: 5px;
   display: flex;
@@ -30,32 +30,31 @@ export const NavBar = styled.nav`
 
   li {
     text-align: center;
-    border-bottom: 2px solid transparent;
     width: 100%;
 
       &:hover {
         cursor: pointer;
         color: var(--navbar-text-hover-color);
-        border-bottom: 2px solid var(--navbar-text-hover-color);
       }
   }
 
   a {
     display: block;
     text-decoration: none;
-    font-size: 0.8rem;
+    font-size: var(--font-size-a);
     font-weight: bold;
     color: var(--navbar-text-color);
     width: 100%;
     height: 100%;
+    border-bottom: 2px solid transparent;
     &:hover {
         color: var(--navbar-text-hover-color);
+        border-bottom: 2px solid var(--navbar-text-hover-color);
       }
   }
 
   img {
     height: 100%;
-    border-radius: 50%;
     cursor: pointer;
   }
 `;

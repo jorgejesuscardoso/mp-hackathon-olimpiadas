@@ -31,7 +31,7 @@ const Nav = () => {
 
   return (
     <NavBar className={showNav ? 'navbar' : 'navbar nav-hider'}>
-      <img src="olympics.png" alt=""
+      <img src="logo_color.svg" alt=""
         onClick={
           () => navigate('/')
         }

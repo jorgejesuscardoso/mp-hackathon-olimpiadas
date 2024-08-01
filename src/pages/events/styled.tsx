@@ -6,7 +6,7 @@ export const Container = styled.main`
   align-items: center;
   justify-content: center;
   width: 100%;
-  margin-top: 8vh;
+  margin-top: 10vh;
   gap: 5px;
 
   margin-bottom: 8vh;  
@@ -19,9 +19,10 @@ export const Card = styled.div`
   align-items: center;
   justify-content: center;
   padding: 10px;
-  width: 50vw;
+  width: 55vw;
   border: none;
   border-radius: 10px;
+  box-shadow: 1px 1px 3px 1px rgba(0, 4, 37, 0.3);
 `;
 
 export const CountryContainer = styled.div`
@@ -30,11 +31,11 @@ export const CountryContainer = styled.div`
   align-items: center;
   justify-content: center;
   padding: 10px;
-  width: 30%;
-  margin: 10px;
+  width: 25%;
+  margin: 5px;
   border-radius: 5px;
   border: none;
-  box-shadow: 1px 1px 5px 2px rgba(0, 4, 37, 0.3);
+  box-shadow: 1px 1px 3px 1px rgba(0, 4, 37, 0.3);
 `;
 
 export const HeaderCard = styled.div`
