@@ -213,7 +213,7 @@ export const NavigatesButtons = styled.div`
     margin: 0 1vw;
     background-color: #f0f0f0;
     color: var(--card-text-color-1);
-    border: none;
+    border: 1px solid var(--card-text-color-1);
     border-radius: 5px;
     outline: none;
     font-weight: bold;

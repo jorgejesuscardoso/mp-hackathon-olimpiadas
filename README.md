@@ -5,6 +5,7 @@ Nós disponibilizamos uma [API com os dados oficiais das Olimpíadas Paris 2024]
 Crie uma aplicação que consuma esses dados e concorra a prêmios.
 
 
+[Deploy desse projeto](https://hackatonbushido.netlify.app/)
 
 
 ## 🤔 Como participar?
