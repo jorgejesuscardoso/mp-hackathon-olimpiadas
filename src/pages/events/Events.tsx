@@ -22,6 +22,8 @@ const EventsCards = () => {
     handleEndPage();
   }, []);
 
+  console.log(allEvents);
+
   const fetchAllEvents = async () => {
     const fetch = await getAll(`events?page=${page}`);
     setAllEvents(fetch.data);
@@ -70,6 +72,8 @@ const EventsCards = () => {
         return 'Winner';
       case 'L':
         return 'Loser';
+      case 'T':
+        return 'Tie';
       default:
         return 'Coming Soon';
     }
