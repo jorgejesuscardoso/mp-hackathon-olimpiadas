@@ -6,17 +6,23 @@ export const Container = styled.main`
   align-items: center;
   justify-content: center;
   margin: 0 auto;
-  margin-top: 9.4vh;
-  width: 95vw;
+  margin-top: 9vh;
 `;
 
-export const Content = styled.div`
+export const Content = styled.section`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 5px;
+`;
+
+export const NextEventContent = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  margin-top: 20px;
+  width: 62%;
+  gap: 1px;
 `;
 
 export const NextEventContainer = styled.div`
@@ -24,16 +30,25 @@ export const NextEventContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  gap: 5px;
+  width: 70%;
+  padding: 10px;
+  gap: 1px;
+
+  h1 {
+    margin-top: 20px;
+    width: 100%;
+    color: var(--text-color-black);
+    font-size: var(--font-size-h2);
+  }
 `;
 
 export const EventList = styled.div`
+  background-color: var(--list-bg-color);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 70%;
+  width: 100%;
 
   ul {
     display: flex;
@@ -42,21 +57,21 @@ export const EventList = styled.div`
     list-style-type: none;
     padding: 0;
     margin: 0;
-    border: 1px solid var(--border-color);
     width: 100%;
+    box-shadow: 1px 1px 3px 1px var(--border-list-color);
 
     li {
       display: flex;
       align-items: center;
       justify-content: center;
-      height: 70px;
+      height: 42.75px;
       padding: 0 10px;
       color: var(--text-color-white);
-      font-size: var(--font-size-p);
+      font-size: var(--font-size-smallest);
       gap: 3px;
 
       img {
-        width: 40px;
+        width: 30px;
       }
 
       p {
@@ -71,6 +86,24 @@ export const EventList = styled.div`
 
   p {
     color: var(--text-color-white);
+  }
+
+`;
+
+export const PromoImgContainer = styled.div`
+  background-color: #111;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+
+  div#carouselExampleIndicators {
+    width: 100%;
+  }
+  img {
+    width: 100%;
   }
 `;
 

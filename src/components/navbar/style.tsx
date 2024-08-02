@@ -8,11 +8,11 @@ export const NavBar = styled.nav`
   background-position: 50% 50%;
   background-repeat: no-repeat;
   width: 100%;
-  height: 9vh;
+  height: 10vh;
   top: 0;
-  padding: 5px;
+  padding: 6px;
   display: flex;
-  justify-content: space-between;
+  justify-content: end;
   align-items: center;
 
   &.nav-hider {
@@ -23,7 +23,7 @@ export const NavBar = styled.nav`
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    width: 20%;
+    width: 23%;
     height: 100%;
     list-style-type: none;
   }
@@ -35,16 +35,15 @@ export const NavBar = styled.nav`
     background-color: var(--body-bg-color);
     text-align: center;
     border-radius: 50%;
+    height: 100%;
 
       &:hover {
         cursor: pointer;
       }
   }
 
-  h3 {
-    color: var(--navbar-text-color);
-    font-size: var(--font-size-h3);
-    font-weight: bold;
+  li.cube {
+    border-radius: 30%;
   }
 
   a {
@@ -55,9 +54,9 @@ export const NavBar = styled.nav`
     font-size: var(--font-size-p);
     font-weight: bold;
     color: var(--navbar-text-color);
-    padding: 5px;
+    padding: 7px;
     width: 100%;
-    height: 40px;
+    height: 100%;
     border-radius: 50%;
 
     &:hover {
@@ -66,7 +65,10 @@ export const NavBar = styled.nav`
   }
 
   img {
-    height: 100%;
+    position: absolute;
+    top: 3px;
+    left: 1%;
+    height: 90%;
     cursor: pointer;
   }
 `;

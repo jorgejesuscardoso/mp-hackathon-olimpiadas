@@ -11,7 +11,7 @@
   --font-size: 1rem;
   --font-size-p: 0.8rem;
   --font-size-a: 0.9rem;
-  --font-size-h1: 1.2rem;
+  --font-size-h1: 1.5rem;
   --font-size-h2: 1rem;
   --font-size-h3: 0.9rem;
 
@@ -21,7 +21,7 @@
   --bg-color-white: #fff;
 
   /* Navbar */
-  --navbar-bg-color: #043a79;
+  --navbar-bg-color: #0064d6;
   --navbar-text-color: #000;
   --navbar-border-color: #053c83;
   --navbar-text-hover-color: darkgreen;
@@ -35,8 +35,10 @@
   --card-border-color: #ccc;
 
   /* Home */
-  --list-bg-color: #979797;
-  --text-color-white: #000000;
+  --list-bg-color: #ffffff;
+  --text-color-white: darkgreen;
+  --border-list-color: #001f3b63;
+  --text-color-black: #00367e;
 }
 
 body {

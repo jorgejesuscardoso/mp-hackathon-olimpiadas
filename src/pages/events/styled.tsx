@@ -31,7 +31,7 @@ export const CountryContainer = styled.div`
   align-items: center;
   justify-content: center;
   padding: 10px;
-  width: 25%;
+  width: 26%;
   margin: 5px;
   border-radius: 5px;
   border: none;
@@ -115,7 +115,7 @@ export const Competitors = styled.div`
     align-items: center;
     justify-content: center;
     width: 100%;
-    gap: 10px;
+    gap: 15px;
     
     p {
       text-align: center;
@@ -136,12 +136,12 @@ export const Competitors = styled.div`
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 22vh;
+    height: 30vh;
 
     img {
       border: 1px solid var(--card-border-color);
       border-radius: 10%;
-      width: 60%;
+      width: 70%;
       margin-bottom: 10px;
     }
   }
@@ -152,7 +152,7 @@ export const Competitors = styled.div`
     align-items: start;
     justify-content: center;
     border-top: 1px solid var(--card-border-color);
-    padding-top: 10px;
+    padding-top: 15px;
     width: 100%;
     height: 8vh;
   }
