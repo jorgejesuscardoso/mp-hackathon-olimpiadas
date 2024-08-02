@@ -43,7 +43,7 @@ const Nav = () => {
 
         <li className='cube'>
           <Link to="/events">
-            Events
+            All Events
           </Link>
         </li>    
 

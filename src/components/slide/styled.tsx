@@ -50,16 +50,16 @@ export const Indicators = styled.div`
   margin-top: 10px;
 `;
 
-interface IndicatorProps {
-  isActive: boolean;
-}
-
-export const Indicator = styled.span<IndicatorProps>`
+export const Indicator = styled.span`
+  background-color: gray;
   height: 15px;
   width: 15px;
   margin: 0 5px;
-  background-color: ${(props) => (props.isActive ? 'black' : 'gray')};
   border-radius: 50%;
   display: inline-block;
   cursor: pointer;
+
+  &.activeSlide {
+    background-color: black;
+  }
 `;

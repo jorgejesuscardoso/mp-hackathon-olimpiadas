@@ -6,7 +6,8 @@ export const Container = styled.main`
   align-items: center;
   justify-content: center;
   width: 100%;
-  margin-top: 10vh;
+  min-height: 100vh;
+  margin-top: 12vh;
   gap: 5px;
 
   margin-bottom: 8vh;  
@@ -163,15 +164,12 @@ export const Competitors = styled.div`
 `;
 
 export const NavigatesButtons = styled.div`
-  position: fixed;
-  background-color: #f0f0f0;
   bottom: 0;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   margin-top: 2vh;
-  border-top: 1px solid var(--card-border-color);
   padding: 3px 0;
   width: 100%;
 

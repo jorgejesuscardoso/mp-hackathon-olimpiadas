@@ -39,11 +39,13 @@ export const NavBar = styled.nav`
 
       &:hover {
         cursor: pointer;
+        background-color: var(--navbar-bg-hover-color);
       }
   }
 
   li.cube {
-    border-radius: 30%;
+    border-radius: 20%;
+    border:none;
   }
 
   a {
@@ -60,7 +62,7 @@ export const NavBar = styled.nav`
     border-radius: 50%;
 
     &:hover {
-        color: var(--navbar-text-hover-color);
+        color: #fff;
       }
   }
 

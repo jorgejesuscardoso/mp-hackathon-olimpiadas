@@ -52,7 +52,7 @@ const SlideShow = ({ interval = 3000 }) => {
         {slides.map((_, index) => (
           <Indicator
             key={index}
-            isActive={currentSlide === index}
+            className={currentSlide === index ? 'activeSlide' : ''}
             onClick={() => setCurrentSlide(index)}
           />
         ))}

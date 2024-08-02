@@ -25,7 +25,7 @@
   --navbar-text-color: #000;
   --navbar-border-color: #053c83;
   --navbar-text-hover-color: darkgreen;
-  --navbar-bg-hover-color: dodgerblue;
+  --navbar-bg-hover-color: rgb(35, 128, 50);
 
   /* Card */
   --card-bg-color: #fff;

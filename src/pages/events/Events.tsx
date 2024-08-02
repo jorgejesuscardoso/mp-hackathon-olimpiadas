@@ -17,7 +17,6 @@ const EventsCards = () => {
 
   useEffect(() => {
     fetchAllEvents();
-    handleScroll();
   }, [page]);
 
   useEffect(() => {
@@ -38,12 +37,17 @@ const EventsCards = () => {
     setPage(splitPage);
   };
 
-  const handleScroll = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth',
-    });
-  }
+  useEffect(() => {
+    // Aguarda o DOM estar atualizado antes de rolar
+    const timer = setTimeout(() => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+      });
+    }, 1300); // Ajuste o tempo se necessário
+
+    return () => clearTimeout(timer); 
+  }, [page]);
 
   const getResultPositionText = (position: string) => {
     switch (position) {

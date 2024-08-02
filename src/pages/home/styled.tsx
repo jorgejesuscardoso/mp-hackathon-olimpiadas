@@ -4,7 +4,7 @@ export const Container = styled.main`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  min-height: 100vh;
   margin: 0 auto;
   margin-top: 9vh;
 `;
@@ -30,7 +30,7 @@ export const NextEventContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 70%;
+  width: 80%;
   padding: 10px;
   gap: 1px;
 
@@ -39,6 +39,11 @@ export const NextEventContainer = styled.div`
     width: 100%;
     color: var(--text-color-black);
     font-size: var(--font-size-h2);
+  }
+
+  p.loading {
+    color: var(--text-color-black);
+    font-size: var(--font-size-p);
   }
 `;
 
@@ -67,7 +72,7 @@ export const EventList = styled.div`
       height: 42.75px;
       padding: 0 10px;
       color: var(--text-color-white);
-      font-size: var(--font-size-smallest);
+      font-size: var(--font-size-p);
       gap: 3px;
 
       img {
