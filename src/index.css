@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Inter", sans-serif;
 }
 
 :root {
@@ -15,8 +16,8 @@
   --font-size-h3: 0.9rem;
 
   /*Body*/
-  --body-bg-color: #eee;
-  --border-color: #555;
+  --body-bg-color: #ffffff;
+  --border-color: #bbb;
   --bg-color-white: #fff;
 
   /* Navbar */

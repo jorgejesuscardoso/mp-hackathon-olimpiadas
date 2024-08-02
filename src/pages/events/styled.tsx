@@ -136,7 +136,7 @@ export const Competitors = styled.div`
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 30vh;
+    height: 22vh;
 
     img {
       border: 1px solid var(--card-border-color);
@@ -154,7 +154,7 @@ export const Competitors = styled.div`
     border-top: 1px solid var(--card-border-color);
     padding-top: 10px;
     width: 100%;
-    height: 5vh;
+    height: 8vh;
   }
 
   img {

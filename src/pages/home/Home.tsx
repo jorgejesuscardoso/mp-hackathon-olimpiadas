@@ -29,7 +29,7 @@ const Home = () => {
 
     filterData();
   }, [dataApi]);
-console.log(filteredData)
+
   return (
     <Container> 
       <Content>
@@ -38,22 +38,22 @@ console.log(filteredData)
           {filteredData.map((item: any) => (
             <EventList key={item.id}>
               <ul>
-                <li className='list-img'>
+                <li>
                   <img src={item.discipline_pictogram} alt="" />
                 </li>
-                <li className="list-sport">
+                <li>
                   <strong>Sport:</strong> {item.discipline_name}
                 </li>
-                <li className="list-date">
+                <li>
                   <strong>Date:</strong> {handleDate(item.day)}
                 </li>
-                <li className="list-venue">
+                <li>
                   <strong>Venue:</strong> {item.venue_name}
                 </li>
-                <li className="list-start">
+                <li>
                   <strong>Start Time:</strong> {handleHour(item.start_date)}
                 </li>
-                <li className="list-end">
+                <li>
                   <strong>End Time:</strong> {handleHour(item.end_date)}
                 </li>
               </ul>

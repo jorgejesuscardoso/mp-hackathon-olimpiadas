@@ -16,6 +16,7 @@ export const Content = styled.div`
   align-items: center;
   justify-content: center;
   width: 100%;
+  margin-top: 20px;
 `;
 
 export const NextEventContainer = styled.div`
@@ -24,6 +25,7 @@ export const NextEventContainer = styled.div`
   align-items: center;
   justify-content: center;
   width: 100%;
+  gap: 5px;
 `;
 
 export const EventList = styled.div`
@@ -61,7 +63,14 @@ export const EventList = styled.div`
         width: 100%;
       }
     }
+  }
 
+  strong {
+    color: darkblue;
+  }
+
+  p {
+    color: var(--text-color-white);
   }
 `;
 
