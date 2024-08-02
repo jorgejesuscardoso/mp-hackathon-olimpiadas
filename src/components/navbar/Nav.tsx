@@ -1,10 +1,10 @@
 import { Link, useNavigate } from 'react-router-dom';
 import { NavBar } from './style';
-import { useEffect, useState } from 'react';
+//import { useEffect, useState } from 'react';
 
 const Nav = () => {
   const navigate = useNavigate();
-  const [prevScrollY, setPrevScrollY] = useState(0);
+  /*const [prevScrollY, setPrevScrollY] = useState(0);
   const [showNav, setShowNav] = useState(true);
 
   useEffect(() => {
@@ -27,10 +27,10 @@ const Nav = () => {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [prevScrollY]);
+  }, [prevScrollY]); */
 
   return (
-    <NavBar className={showNav ? 'navbar' : 'navbar nav-hider'}>
+    <NavBar /* className={showNav ? 'navbar' : 'navbar nav-hider'} */>
       <img src="logo_color.svg" alt=""
         onClick={
           () => navigate('/')

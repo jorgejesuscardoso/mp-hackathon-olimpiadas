@@ -22,14 +22,10 @@ export const NavBar = styled.nav`
   ul {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
     width: 20%;
     height: 100%;
     list-style-type: none;
-
-    &:last-child {
-      margin-right: 20px;
-    }
   }
 
   li {
@@ -56,14 +52,13 @@ export const NavBar = styled.nav`
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    font-size: var(--font-size-a);
+    font-size: var(--font-size-p);
     font-weight: bold;
     color: var(--navbar-text-color);
-    padding: 10px;
+    padding: 5px;
     width: 100%;
-    height: 50px;
+    height: 40px;
     border-radius: 50%;
-    border-bottom: 2px solid transparent;
 
     &:hover {
         color: var(--navbar-text-hover-color);
