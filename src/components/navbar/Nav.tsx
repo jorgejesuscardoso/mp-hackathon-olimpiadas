@@ -36,7 +36,6 @@ const Nav = () => {
           () => navigate('/')
         }
       />
-
       <ul>
         <li>
           <Link to="/">Home</Link>

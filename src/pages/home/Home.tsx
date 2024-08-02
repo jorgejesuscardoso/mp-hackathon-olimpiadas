@@ -1,8 +1,9 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from 'react';
-import { Container } from './styled';
+import { Container, Content, EventList, NextEventContainer } from './styled';
 import { getAll } from '../../services/Api';
+import { handleDate, handleHour } from '../../utils/helpers';
 
 const Home = () => {
   const [dataApi, setDataApi] = useState<[]>([]);
@@ -28,20 +29,38 @@ const Home = () => {
 
     filterData();
   }, [dataApi]);
-
+console.log(filteredData)
   return (
     <Container> 
-      <div>
-        <h1>Next Events</h1>
-        <div>
+      <Content>
+        <NextEventContainer>
+          <h1>Next Events</h1>
           {filteredData.map((item: any) => (
-            <div key={item.id}>
-              <h2>{item.status}</h2>
-            </div>
+            <EventList key={item.id}>
+              <ul>
+                <li className='list-img'>
+                  <img src={item.discipline_pictogram} alt="" />
+                </li>
+                <li className="list-sport">
+                  <strong>Sport:</strong> {item.discipline_name}
+                </li>
+                <li className="list-date">
+                  <strong>Date:</strong> {handleDate(item.day)}
+                </li>
+                <li className="list-venue">
+                  <strong>Venue:</strong> {item.venue_name}
+                </li>
+                <li className="list-start">
+                  <strong>Start Time:</strong> {handleHour(item.start_date)}
+                </li>
+                <li className="list-end">
+                  <strong>End Time:</strong> {handleHour(item.end_date)}
+                </li>
+              </ul>
+            </EventList>
           ))}
-        </div>
-      </div>
-      
+        </NextEventContainer>
+      </Content>      
     </Container>
   );
 }

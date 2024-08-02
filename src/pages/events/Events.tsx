@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { CardInfo, Competitors, Container, Card, CountryContainer, HeaderCard, NavigatesButtons } from './styled';
 import { getAll } from '../../services/Api';
 import Swal from 'sweetalert2';
+import { handleDate, handleHour } from '../../utils/helpers';
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
 const EventsCards = () => {
@@ -43,16 +44,6 @@ const EventsCards = () => {
       behavior: 'smooth',
     });
   }
-
-  const handleHour = (date: string) => {
-    const hour = new Date(date).getHours().toString().padStart(2, '0');
-    const minutes = new Date(date).getMinutes().toString().padStart(2, '0');
-
-    const formattedHour = +hour % 12 || 12; 
-    const period = +hour < 12 ? 'AM' : 'PM';
-
-    return `${formattedHour.toString().padStart(2, '0')}:${minutes} ${period}`;
-  };
 
   const getResultPositionText = (position: string) => {
     switch (position) {
@@ -112,13 +103,13 @@ const EventsCards = () => {
             <div className='avenue-card'>              
               <p><strong>Details:</strong> {event.detailed_event_name}</p>
               <p>
-                <strong>Medal Event:</strong> {event.is_medal_event !== 0 ? 'Yes' : 'No'}
+                <strong>Medal Event:</strong> {event.is_medal_event}
               </p>
             </div>
 
             <div>
               <p><strong>Venue:</strong> {event.venue_name}</p>
-              <p><strong>Date:</strong> {event.day.split('-').reverse().join('/')}</p>
+              <p><strong>Date:</strong> {handleDate(event.day)}</p>
             </div>
 
             <div className='time-card'>

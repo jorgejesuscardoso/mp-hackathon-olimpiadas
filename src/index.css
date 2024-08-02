@@ -6,6 +6,8 @@
 
 :root {
   /* Font size */
+  --font-size-smallest: 0.7rem;
+  --font-size: 1rem;
   --font-size-p: 0.8rem;
   --font-size-a: 0.9rem;
   --font-size-h1: 1.2rem;
@@ -14,12 +16,15 @@
 
   /*Body*/
   --body-bg-color: #eee;
+  --border-color: #555;
+  --bg-color-white: #fff;
 
   /* Navbar */
-  --navbar-bg-color: #fff;
-  --navbar-text-color: #777;
+  --navbar-bg-color: #043a79;
+  --navbar-text-color: #000;
   --navbar-border-color: #053c83;
-  --navbar-text-hover-color: #333;
+  --navbar-text-hover-color: darkgreen;
+  --navbar-bg-hover-color: dodgerblue;
 
   /* Card */
   --card-bg-color: #fff;
@@ -27,6 +32,10 @@
   --card-text-color-2: #001f3b;
   --card-text-strong-color: #353535;
   --card-border-color: #ccc;
+
+  /* Home */
+  --list-bg-color: #979797;
+  --text-color-white: #000000;
 }
 
 body {
