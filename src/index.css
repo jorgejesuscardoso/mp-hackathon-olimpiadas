@@ -39,6 +39,10 @@
   --text-color-white: darkgreen;
   --border-list-color: #001f3b63;
   --text-color-black: #00367e;
+
+  /* Footer */
+  --footer-bg-color: #060814;
+  --footer-text-color: #fff;
 }
 
 body {

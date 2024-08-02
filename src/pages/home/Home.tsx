@@ -10,6 +10,7 @@ const Home = () => {
   const [dataApi, setDataApi] = useState<[]>([]);
   const [filteredData, setFilteredData] = useState<any>([]);
   const [finalPage, setFinalPage] = useState<number>(0);
+  const [loading, setLoading] = useState('');
 
   useEffect(() => {
     const fetchData = async () => {
@@ -22,38 +23,47 @@ const Home = () => {
   }, []);
 
   useEffect(() => {
+    const storedItem = localStorage.getItem('events');
+    const expiryStorage = storedItem ? JSON.parse(storedItem) : { allEvents: [], expiry: 0 };
+    const isExpired = expiryStorage.expiry <= Date.now();
+
+    if (!isExpired && expiryStorage.allEvents.length > 0) {
+        setFilteredData(expiryStorage.allEvents.slice(0, 6));
+        return;
+    }
+
     const filterData = async () => {
-      let allEvents: any = [];
-      let page = finalPage;
-      const desiredCount = 6;
-  
-      try {
-        while (allEvents.length < desiredCount && page >= 0) {
-          // Faz a chamada para a API
-          const response = await getAll(`events?page=${page}`);
-          
-          // Filtra eventos agendados e adiciona à lista
-          const scheduledEvents = response.data.filter(
-            (item: any) => item.status === 'Scheduled'
-          );
-          allEvents = allEvents.concat(scheduledEvents);
-  
-          // Verifica se já atingiu a quantidade desejada
-          if (allEvents.length >= desiredCount) break;
-  
-          // Decrementa a página para buscar a próxima
-          page--;
+        let allEvents: any = [];
+        let page = finalPage;
+        const desiredCount = 6;
+        setLoading("Finding events...");
+
+        try {
+            while (allEvents.length < desiredCount && page >= 0) {
+                const response = await getAll(`events?page=${page}`);
+                const scheduledEvents = response.data.filter(
+                    (item:any) => item.status === 'Scheduled'
+                );
+                allEvents = allEvents.concat(scheduledEvents);
+
+                if (allEvents.length >= desiredCount) break;
+                page--;
+            }
+
+            localStorage.setItem('events', JSON.stringify({ 
+                allEvents,
+                expiry: Date.now() + 60000 // Expiração em 60 segundos
+            }));
+            setFilteredData(allEvents.slice(0, desiredCount));
+        } catch (error) {
+            console.error('Erro ao carregar eventos:', error);
+        } finally {
+            setLoading('');
         }
-  
-        // Define o estado com os eventos filtrados, limitando ao desiredCount
-        setFilteredData(allEvents.slice(0, desiredCount));
-      } catch (error) {
-        console.error('Erro ao carregar eventos:', error);
-      }
     };
-  
+
     filterData();
-  }, [dataApi]);
+}, [dataApi]);
 
   return (
     <Container>  
@@ -87,8 +97,10 @@ const Home = () => {
                       <strong>End Time:</strong> {handleHour(item.end_date)}
                     </li>
                   </ul>
+                ) : loading ? (
+                  <p>{loading}</p>
                 ) : (
-                  <p>No events scheduled</p>
+                  <p>No events found</p>
                 )
               }
             </EventList>
