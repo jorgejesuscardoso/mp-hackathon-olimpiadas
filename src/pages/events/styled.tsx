@@ -188,17 +188,10 @@ export const NavigatesButtons = styled.div`
   }
 
   button {
-    margin: 0 1vw;
     padding: 2px 10px;
-    background-color: #f0f0f0;
-    color: var(--card-text-color-1);
-    border: 1px solid var(--card-text-color-1);
+    border: none;
     border-radius: 5px;
     cursor: pointer;
-
-    &:hover {
-      background-color: #e0e0e0;
-    }
 
     &:disabled {
       cursor: not-allowed;
@@ -219,5 +212,10 @@ export const NavigatesButtons = styled.div`
     &:hover {
       background-color: #e0e0e0;
     }
+  }
+
+  img {
+    background-color: none;
+    width: 1vw;
   }
 `;

@@ -23,7 +23,7 @@ export const NavBar = styled.nav`
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    width: 23%;
+    width: 15%;
     height: 100%;
     list-style-type: none;
   }
@@ -32,20 +32,12 @@ export const NavBar = styled.nav`
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--body-bg-color);
     text-align: center;
-    border-radius: 50%;
     height: 100%;
 
       &:hover {
-        cursor: pointer;
-        background-color: var(--navbar-bg-hover-color);
+        cursor: pointer;       
       }
-  }
-
-  li.cube {
-    border-radius: 20%;
-    border:none;
   }
 
   a {
@@ -53,17 +45,18 @@ export const NavBar = styled.nav`
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    font-size: var(--font-size-p);
-    font-weight: bold;
+    font-size: var(--font-size-a);
+    font-weight: bolder;
     color: var(--navbar-text-color);
-    padding: 7px;
+    padding: 5px;
     width: 100%;
     height: 100%;
-    border-radius: 50%;
+    border-radius: 15%;
+    border: 1px solid  transparent;
 
     &:hover {
-        color: #fff;
-      }
+      border: 1px solid #fff;
+    }
   }
 
   img {

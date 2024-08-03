@@ -23,8 +23,6 @@ const EventsCards = () => {
     handleEndPage();
   }, []);
 
-  console.log(allEvents);
-
   const fetchAllEvents = async () => {
     const fetch = await getAll(`events?page=${page}`);
     setAllEvents(fetch.data);
@@ -131,9 +129,8 @@ const EventsCards = () => {
                   }
                   return b.result_mark - a.result_mark
                 }).filter((s: any) => s.country_flag_url).map((competitor: any) => (
-                  <CountryContainer>
+                  <CountryContainer key={competitor.position}>
                     <div
-                      key={competitor.country_flag_url}
                       className='country-card'
                     >
                       <img 
@@ -179,13 +176,13 @@ const EventsCards = () => {
         onClick={() => handlePageChange(1)}
         disabled={page === 1}
       >
-        {'<<'}
+        <img src="fast_prev.png" alt="fast forward" />
       </button>
       <button
         onClick={() => handlePageChange(page - 1)}
         disabled={page === 1}
       >
-        {'<'}
+        <img src="prev_black.png" alt="previous" />
       </button>
 
       <span>Page</span>
@@ -209,14 +206,14 @@ const EventsCards = () => {
         onClick={() => handlePageChange(page + 1)}
         disabled={page === finalPage}
       >
-        {'>'}
+        <img src="next_black.png" alt="next" />
       </button>
 
       <button
         onClick={() => handlePageChange(finalPage || 1)}
         disabled={page === finalPage}
       >
-        {'>>'}
+        <img src="fast_next.png" alt="fast rewind" />
       </button>
 
     </NavigatesButtons>

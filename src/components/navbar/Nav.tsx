@@ -43,16 +43,11 @@ const Nav = () => {
 
         <li className='cube'>
           <Link to="/events">
-            All Events
+            Events
           </Link>
-        </li>    
-
-        <li>
-          <Link to="#">About</Link>
         </li>
-
-        <li className='cube'>
-          <Link to="#">Contact</Link>
+        <li>
+          <Link to="#">Countries</Link>
         </li>
       </ul>
 

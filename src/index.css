@@ -10,22 +10,25 @@
   --font-size-smallest: 0.7rem;
   --font-size: 1rem;
   --font-size-p: 0.8rem;
-  --font-size-a: 0.9rem;
+  --font-size-a: 0.75rem;
+  --font-size-a-nav: 0.7rem;
   --font-size-h1: 1.5rem;
   --font-size-h2: 1rem;
   --font-size-h3: 0.9rem;
+
 
   /*Body*/
   --body-bg-color: #ffffff;
   --border-color: #bbb;
   --bg-color-white: #fff;
+  --bg-gray: #ccc;
 
   /* Navbar */
   --navbar-bg-color: #0064d6;
-  --navbar-text-color: #000;
+  --navbar-text-color: #ffffff;
   --navbar-border-color: #053c83;
   --navbar-text-hover-color: darkgreen;
-  --navbar-bg-hover-color: rgb(35, 128, 50);
+  --navbar-bg-hover-color: #006eff;
 
   /* Card */
   --card-bg-color: #fff;
